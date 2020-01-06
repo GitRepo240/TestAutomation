@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false">
+  	 <listeners>
+       <!-- <listener class-name="com.qa.util.ExtentReporterNG" />--> 
+        <!--<listener class-name="com.qa.base.TestListener" />-->
+    </listeners>
+  
+	<test enabled="false" name="Smoke Test" preserve-order="true">
+	 	<parameter name="browser" value="Chrome"></parameter>
+		<classes> 
+			<class name="com.qa.testlayer.TestHome"/>
+			<class name="com.qa.testlayer.TestReferenceData"/>
+		</classes> 
+	</test>
+	
+	
+	<test enabled="true" name="Chrome Test" preserve-order="true">
+	 	<parameter name="browser" value="Chrome"></parameter>
+	 	<classes> 
+			<!--  <class name="com.qa.testlayer.TestContactPage"/>-->
+			<class name="com.qa.testlayer.TestManageRole"/>
+			<!--<class name="com.qa.testlayer.TestSearchPage"/>-->
+			<!--<class name="com.qa.testlayer.TestRndOne"/>-->
+			<!--<class name="com.qa.testlayer.TestRndTwo"/>-->
+			<!-- <class name="com.qa.base.BeforeSuiteAndTest"/>--> 
+			<!-- Test runner wont run as it has not any testNG method & it is run using junit test --> 
+			<!-- <class name="com.qa.testrunner.TestRunner"/>  --> 
+			<!--<class name="com.qa.testlayer.TestLogin"/>-->
+			
+		</classes> 
+	</test>
+	<test enabled="false" name="Chrome Test" preserve-order="true" >
+	 	<parameter name="browser" value="Chrome"></parameter>
+	 	<classes> 
+			<class name="com.qa.testlayer.TestReferenceData"/>
+		</classes> 
+	</test>
+	
+  	
+</suite> <!-- Suite -->
